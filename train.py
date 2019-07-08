@@ -3,6 +3,8 @@ from sklearn.utils import shuffle
 import tensorflow as tf
 import numpy as np
 
+from model import LeNet
+
 # Load pickled data
 training_file = './data/train.p'
 validation_file = './data/valid.p'
