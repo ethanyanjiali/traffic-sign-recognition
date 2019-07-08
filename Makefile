@@ -3,4 +3,4 @@ download:
 	unzip traffic-signs-data.zip
 
 train:
-	nohup python train.py &
+	nohup python -u train.py &
