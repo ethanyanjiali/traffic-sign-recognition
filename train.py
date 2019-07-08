@@ -53,7 +53,7 @@ rate = 0.001
 
 x = tf.placeholder(tf.float32, shape=(None, 32, 32, 3), name="x")
 y = tf.placeholder(tf.int32, (None))
-one_hot_y = tf.one_hot(y, 10)
+one_hot_y = tf.one_hot(y, 43)
 
 logits = LeNet(x)
 cross_entropy = tf.nn.softmax_cross_entropy_with_logits(labels=one_hot_y,
