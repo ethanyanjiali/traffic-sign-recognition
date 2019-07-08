@@ -94,7 +94,9 @@ with tf.Session() as sess:
         for offset in range(0, n_train, BATCH_SIZE):
             end = offset + BATCH_SIZE
             batch_x, batch_y = X_train[offset:end], y_train[offset:end]
-            validation_accuracy = evaluate(X_valid, y_valid)
+            sess.run(training_operation, feed_dict={x: batch_x, y: batch_y})
+
+        validation_accuracy = evaluate(X_valid, y_valid)
         print("EPOCH {} ...".format(i + 1))
         print("Validation Accuracy = {:.3f}".format(validation_accuracy))
         print()
